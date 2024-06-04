@@ -1,4 +1,6 @@
-# AISpeech
-A companion which communicates with you
+# AICompanion
+A companion pet who is capable to communicate and giving reactions to its owner sound.
 
-# AIVisual
+# AISpeech
+
+# AIVision
