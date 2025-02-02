@@ -1,7 +1,7 @@
 from pyannote.audio import Pipeline
 pipeline = Pipeline.from_pretrained(
     "pyannote/speaker-diarization-3.1",
-    use_auth_token="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")
+    use_auth_token="HUGGINF FACE TOKEN")
 
 # send pipeline to GPU (when available)
 import torch
