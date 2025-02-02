@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.10.11",
+    "heartbeatAt": "2024-06-10T05:42:49.796385",
+    "startedAt": "2024-06-10T05:42:46.933830",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/darkcentaur/AICompanion.git",
+        "commit": "87b23e92343fb870257a75ef2fdcf0de3ed76035"
+    },
+    "email": null,
+    "root": "C:/Users/Terry Teh/TETLAB/AICompanion",
+    "host": "LAPTOP-TS2KTTD9",
+    "username": "Terry Teh",
+    "executable": "C:\\Users\\Terry Teh\\TETLAB\\AICompanion\\.venv\\Scripts\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 22,
+    "cpu_freq": {
+        "current": 2300.0,
+        "min": 0.0,
+        "max": 2300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2300.0,
+            "min": 0.0,
+            "max": 2300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 926.1721839904785,
+            "used": 207.66620635986328
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+            "memory_total": 8585740288
+        }
+    ],
+    "memory": {
+        "total": 31.59880828857422
+    }
+}

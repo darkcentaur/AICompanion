@@ -1,0 +1,1310 @@
+  File "<stdin>", line 1
+    dataset = load_dataset("THUDM/AgentInstruct", split="train")def format_prompt(sample):
+                                                                ^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    dataset = load_dataset("THUDM/AgentInstruct", split="train")def format_prompt(sample):
+                                                                ^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    intro = "Below is a conversation between a user and you."
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    intro = "Below is a conversation between a user and you."
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    end = "Instruction: Write a response appropriate to the conversation."
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    end = "Instruction: Write a response appropriate to the conversation."
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    try:
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    try:
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    formatted_conversations = "\n".join(
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    formatted_conversations = "\n".join(
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f"<{resp['from']}>: {resp['value']}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f"<{resp['from']}>: {resp['value']}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    for resp in sample["conversations"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    for resp in sample["conversations"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    )
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    )
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    sample["text"] = f"{intro}\n\n{formatted_conversations}\n\n{end}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    sample["text"] = f"{intro}\n\n{formatted_conversations}\n\n{end}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    except (TypeError, KeyError):
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    except (TypeError, KeyError):
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    raise ValueError("Invalid format of the input sample.")
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    raise ValueError("Invalid format of the input sample.")
+IndentationError: unexpected indent
+Downloading readme: 100%|█████████| 3.80k/3.80k [00:00<?, ?B/s]
+Downloading data: 100%|█████| 118k/118k [00:01<00:00, 77.7kB/s]
+Downloading data: 100%|██████| 273k/273k [00:01<00:00, 210kB/s]
+Downloading data: 100%|██████| 158k/158k [00:01<00:00, 125kB/s]
+Downloading data: 100%|██████| 443k/443k [00:01<00:00, 350kB/s]
+Downloading data: 100%|██████| 212k/212k [00:01<00:00, 157kB/s]
+Downloading data: 100%|███| 50.9k/50.9k [00:01<00:00, 40.3kB/s]
+Generating os split: 100%|█| 195/195 [00:00<00:00, 12038.23 exa
+Generating db split: 100%|█| 538/538 [00:00<00:00, 96145.53 exa
+Generating alfworld split: 100%|█| 336/336 [00:00<00:00, 75435.
+Generating webshop split: 100%|█| 351/351 [00:00<00:00, 74810.7
+Generating kg split: 100%|█| 324/324 [00:00<00:00, 55921.75 exa
+Generating mind2web split: 100%|█| 122/122 [00:00<00:00, 35826.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\load.py", line 2626, in load_dataset
+    ds = builder_instance.as_dataset(split=split, verification_mode=verification_mode, in_memory=keep_in_memory)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\builder.py", line 1266, in as_dataset
+    datasets = map_nested(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\utils\py_utils.py", line 484, in map_nested
+    mapped = function(data_struct)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\builder.py", line 1296, in _build_single_dataset
+    ds = self._as_dataset(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\builder.py", line 1370, in _as_dataset
+    dataset_kwargs = ArrowReader(cache_dir, self.info).read(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 252, in read
+    files = self.get_file_instructions(name, instructions, split_infos)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 225, in get_file_instructions
+    file_instructions = make_file_instructions(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 134, in make_file_instructions
+    absolute_instructions = instruction.to_absolute(name2len)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 663, in to_absolute
+    return [_rel_to_abs_instr(rel_instr, name2len) for rel_instr in self._relative_instructions]
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 663, in <listcomp>
+    return [_rel_to_abs_instr(rel_instr, name2len) for rel_instr in self._relative_instructions]
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 480, in _rel_to_abs_instr
+    raise ValueError(f'Unknown split "{split}". Should be one of {list(name2len)}.')
+ValueError: Unknown split "train". Should be one of ['os', 'db', 'alfworld', 'webshop', 'kg', 'mind2web'].
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\load.py", line 2626, in load_dataset
+    ds = builder_instance.as_dataset(split=split, verification_mode=verification_mode, in_memory=keep_in_memory)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\builder.py", line 1266, in as_dataset
+    datasets = map_nested(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\utils\py_utils.py", line 484, in map_nested
+    mapped = function(data_struct)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\builder.py", line 1296, in _build_single_dataset
+    ds = self._as_dataset(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\builder.py", line 1370, in _as_dataset
+    dataset_kwargs = ArrowReader(cache_dir, self.info).read(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 252, in read
+    files = self.get_file_instructions(name, instructions, split_infos)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 225, in get_file_instructions
+    file_instructions = make_file_instructions(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 134, in make_file_instructions
+    absolute_instructions = instruction.to_absolute(name2len)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 663, in to_absolute
+    return [_rel_to_abs_instr(rel_instr, name2len) for rel_instr in self._relative_instructions]
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 663, in <listcomp>
+    return [_rel_to_abs_instr(rel_instr, name2len) for rel_instr in self._relative_instructions]
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\datasets\arrow_reader.py", line 480, in _rel_to_abs_instr
+    raise ValueError(f'Unknown split "{split}". Should be one of {list(name2len)}.')
+ValueError: Unknown split "train". Should be one of ['os', 'db', 'alfworld', 'webshop', 'kg', 'mind2web'].
+  File "<stdin>", line 1
+    try:
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    try:
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    formatted_conversations = "\n".join(
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    formatted_conversations = "\n".join(
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f"<{resp['from']}>: {resp['value']}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f"<{resp['from']}>: {resp['value']}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    for resp in sample["conversations"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    for resp in sample["conversations"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    )
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    )
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    sample["text"] = f"{intro}\n\n{formatted_conversations}\n\n{end}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    sample["text"] = f"{intro}\n\n{formatted_conversations}\n\n{end}"
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    except (TypeError, KeyError):
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    except (TypeError, KeyError):
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    raise ValueError("Invalid format of the input sample.")
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    raise ValueError("Invalid format of the input sample.")
+IndentationError: unexpected indent
+  File "<stdin>", line 13
+    dataset = dataset.map(
+    ^^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 13
+    dataset = dataset.map(
+    ^^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 2
+    ...     intro = "Below is a conversation between a user and you."
+    ^^^
+IndentationError: expected an indented block after function definition on line 1
+  File "<stdin>", line 2
+    ...     intro = "Below is a conversation between a user and you."
+    ^
+IndentationError: expected an indented block after function definition on line 1
+  File "<stdin>", line 1
+    ...     end = "Instruction: Write a response appropriate to the ...     try:
+            ^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...     end = "Instruction: Write a response appropriate to the ...     try:
+            ^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...         formatted_conversations = "\n".join(
+                ^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...         formatted_conversations = "\n".join(
+                ^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...             f"<{resp['from']}>: {resp['value']}"
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...             f"<{resp['from']}>: {resp['value']}"
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...             for resp in sample["conversations"]
+                    ^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...             for resp in sample["conversations"]
+                    ^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...         )
+                ^
+SyntaxError: unmatched ')'
+  File "<stdin>", line 1
+    ...         )
+                ^
+SyntaxError: unmatched ')'
+  File "<stdin>", line 1
+    ...         sample["text"] = f"{intro}\n\n{formatted_conversations}\n\n{end}"
+                ^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...         sample["text"] = f"{intro}\n\n{formatted_conversations}\n\n{end}"
+                ^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...     except (TypeError, KeyError):
+            ^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...     except (TypeError, KeyError):
+            ^^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...         raise ValueError("Invalid format of the input sample.")
+                ^^^^^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ...         raise ValueError("Invalid format of the input sample.")
+                ^^^^^
+SyntaxError: invalid syntax
+Map: 100%|██████████| 195/195 [00:00<00:00, 6239.67 examples/s]
+'Below is a conversation between a user and you.\n\n<human>: You are an assistant that will act like a person, I\'will play the role of linux(ubuntu) operating system. Your goal is to implement the operations required by me or answer to the question proposed by me. For each of your turn, you should first think what you should do, and then take exact one of the three actions: "bash", "finish" or "answer". \n\n1. If you think you should execute some bash code, take bash action, and you should print like this:\n\nThink: put your thought here.\n\nAct: bash\n\n```bash\n# put your bash code here\n```\n\n2. If you think you have finished the task, take finish action, and you should print like this:\n\nThink: put your thought here.\n\nAct: finish\n\n3. If you think you have got the answer to the question, take answer action, and you should print like this:\n\nThink: put your thought here.\n\nAct: answer(Your answer to the question should be put in this pair of parentheses)\n\nIf the output is too long, I will truncate it. The truncated output is not complete. You have to deal with the truncating problem by yourself. Attention, your bash code should not contain any input operation. Once again, you should take only exact one of the three actions in each turn.\n\nNow, my problem is:\n\ntell me how many files are in the directory "/etc"?\n<gpt>: Think: To count the files in /etc, I need to print all the files in it.\n\nAct: bash\n\n```bash\nls /etc\n```\n<human>: The output of the OS:\ncpi cron.hourly fuse.conf iproute2 lvm networkd-dispatcher protocols selinux tmpfiles.d [truncated because the output is too long]\n<gpt>: Think: The output has been truncated because it is too long, so I need to count files by script directly.\n\nAct: bash\n\n```bash\nls -1 /etc | wc -l\n```\n<human>: The output of the OS:\n220\n<gpt>: Think: Now I get the answer, it is 220.\n\nAct: answer(220)\n<human>: Now, I will start a new problem in a new OS. My problem is:\n\nFind out how many non-empty lines there are across all text files (\'.txt\' extension) in your home directory, including those files in the subdirectories.\n<gpt>: Think: Firstly, I need to find all the \'.txt\' files in the home directory and its subdirectories.\n\nAct: bash\n\n```bash\nfind ~ -name "*.txt"\n```\n<human>: The output of the OS:\n\n/root/text_files/subfolder/world.txt\r\n/root/text_files/hello.txt\r\n\x1b]0;root@9ac590f1a32b: /\x07root@9ac590f1a32b:/#\n<gpt>: Think: Now, I need to grep all non-empty lines from these files.\n\nAct: bash\n\n```bash\nfind ~ -name "*.txt" | xargs grep -v \'^$\'\n```\n<human>: The output of the OS:\n\n/root/text_files/subfolder/world.txt:    \r\n/root/text_files/subfolder/world.txt:Mundane tastes\r\n/root/text_files/subfolder/world.txt:diversify.\r\n/root/text_files/hello.txt:Reading\r\n/root/text_files/hello.txt:hard books,\r\n/root/text_files/hello.txt:Is,\r\n/root/text_files/hello.txt:a fascinating hobby.\r\n/root/text_files/hello.txt:        \r\n\x1b]0;root@9ac590f1a32b: /\x07root@9ac590f1a32b:/# \x1b[K\n<gpt>: Think: The output shows non-empty lines across all text files. Now, I should calculate the count of these lines.\n\nAct: bash\n\n```bash\nfind ~ -name "*.txt" | xargs grep -v \'^$\' | wc -l\n```\n<human>: The output of the OS:\n\n8\r\n\x1b]0;root@9ac590f1a32b: /\x07root@9ac590f1a32b:/# \x1b[K\n<gpt>: Think: Now I get the answer, it is 8.\n\nAct: answer(8)\n\nInstruction: Write a response appropriate to the conversation.'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3129, in from_pretrained
+    raise ValueError(
+ValueError: You can't pass `load_in_4bit`or `load_in_8bit` as a kwarg when passing `quantization_config` argument at the same time.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3129, in from_pretrained
+    raise ValueError(
+ValueError: You can't pass `load_in_4bit`or `load_in_8bit` as a kwarg when passing `quantization_config` argument at the same time.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3703, in from_pretrained
+    hf_quantizer.validate_environment(device_map=device_map)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\quantizers\quantizer_bnb_4bit.py", line 85, in validate_environment
+    raise ValueError(
+ValueError: Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3703, in from_pretrained
+    hf_quantizer.validate_environment(device_map=device_map)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\quantizers\quantizer_bnb_4bit.py", line 85, in validate_environment
+    raise ValueError(
+ValueError: Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3703, in from_pretrained
+    hf_quantizer.validate_environment(device_map=device_map)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\quantizers\quantizer_bnb_4bit.py", line 85, in validate_environment
+    raise ValueError(
+ValueError: Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3703, in from_pretrained
+    hf_quantizer.validate_environment(device_map=device_map)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\quantizers\quantizer_bnb_4bit.py", line 85, in validate_environment
+    raise ValueError(
+ValueError: Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `load_in_8bit_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details.
+  File "<stdin>", line 4
+SyntaxError: keyword argument repeated: load_in_4bit
+  File "<stdin>", line 4
+SyntaxError: keyword argument repeated: load_in_4bit
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+`low_cpu_mem_usage` was None, now set to True since model is quantized.
+Loading checkpoint shards:   0%|         | 0/8 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3754, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 4214, in _load_pretrained_model
+    new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 887, in _load_state_dict_into_meta_model
+    set_module_tensor_to_device(model, param_name, param_device, **set_module_kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\utils\modeling.py", line 400, in set_module_tensor_to_device
+    new_value = value.to(device)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 3754, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 4214, in _load_pretrained_model
+    new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\modeling_utils.py", line 887, in _load_state_dict_into_meta_model
+    set_module_tensor_to_device(model, param_name, param_device, **set_module_kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\utils\modeling.py", line 400, in set_module_tensor_to_device
+    new_value = value.to(device)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Loading checkpoint shards: 100%|█| 8/8 [00:01<00:00,  6.05it/s]
+WARNING:root:Some parameters are on the meta device device because they were offloaded to the cpu.
+(True, True)
+C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\huggingface_hub\utils\_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\training_args.py:1965: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map: 100%|██████████| 195/195 [00:00<00:00, 2330.55 examples/s]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 1885, in train
+    return inner_training_loop(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 2042, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1299, in prepare
+    result = tuple(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1300, in <genexpr>
+    self._prepare_one(obj, first_pass=True, device_placement=d) for obj, d in zip(args, device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1176, in _prepare_one
+    return self.prepare_model(obj, device_placement=device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1409, in prepare_model
+    raise ValueError(
+ValueError: You can't train a model that has been loaded in 8-bit precision on a different device than the one you're training on. Make sure you loaded the model on the correct device using for example `device_map={'':torch.cuda.current_device()}` or `device_map={'':torch.xpu.current_device()}`
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 1885, in train
+    return inner_training_loop(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 2042, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1299, in prepare
+    result = tuple(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1300, in <genexpr>
+    self._prepare_one(obj, first_pass=True, device_placement=d) for obj, d in zip(args, device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1176, in _prepare_one
+    return self.prepare_model(obj, device_placement=device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1409, in prepare_model
+    raise ValueError(
+ValueError: You can't train a model that has been loaded in 8-bit precision on a different device than the one you're training on. Make sure you loaded the model on the correct device using for example `device_map={'':torch.cuda.current_device()}` or `device_map={'':torch.xpu.current_device()}`
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 1885, in train
+    return inner_training_loop(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 2042, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1299, in prepare
+    result = tuple(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1300, in <genexpr>
+    self._prepare_one(obj, first_pass=True, device_placement=d) for obj, d in zip(args, device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1176, in _prepare_one
+    return self.prepare_model(obj, device_placement=device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1409, in prepare_model
+    raise ValueError(
+ValueError: You can't train a model that has been loaded in 8-bit precision on a different device than the one you're training on. Make sure you loaded the model on the correct device using for example `device_map={'':torch.cuda.current_device()}` or `device_map={'':torch.xpu.current_device()}`
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 1885, in train
+    return inner_training_loop(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 2042, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1299, in prepare
+    result = tuple(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1300, in <genexpr>
+    self._prepare_one(obj, first_pass=True, device_placement=d) for obj, d in zip(args, device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1176, in _prepare_one
+    return self.prepare_model(obj, device_placement=device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1409, in prepare_model
+    raise ValueError(
+ValueError: You can't train a model that has been loaded in 8-bit precision on a different device than the one you're training on. Make sure you loaded the model on the correct device using for example `device_map={'':torch.cuda.current_device()}` or `device_map={'':torch.xpu.current_device()}`
+  File "<stdin>", line 2
+    print(param.shape)
+    ^^^^^
+IndentationError: expected an indented block after 'for' statement on line 1
+  File "<stdin>", line 2
+    print(param.shape)
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+torch.Size([32000, 4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096, 4096])
+torch.Size([1024, 4096])
+torch.Size([1024, 4096])
+torch.Size([4096, 4096])
+torch.Size([14336, 4096])
+torch.Size([14336, 4096])
+torch.Size([64, 4096])
+torch.Size([14336, 64])
+torch.Size([4096, 14336])
+torch.Size([64, 14336])
+torch.Size([4096, 64])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([4096])
+torch.Size([32000, 4096])
+base_model.model.model.embed_tokens.weight torch.Size([32000, 4096])
+base_model.model.model.layers.0.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.0.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.0.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.0.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.0.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.0.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.0.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.0.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.0.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.0.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.0.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.0.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.0.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.1.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.1.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.1.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.1.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.1.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.1.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.1.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.1.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.1.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.1.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.1.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.1.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.1.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.2.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.2.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.2.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.2.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.2.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.2.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.2.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.2.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.2.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.2.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.2.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.2.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.2.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.3.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.3.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.3.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.3.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.3.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.3.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.3.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.3.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.3.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.3.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.3.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.3.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.3.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.4.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.4.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.4.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.4.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.4.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.4.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.4.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.4.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.4.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.4.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.4.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.4.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.4.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.5.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.5.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.5.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.5.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.5.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.5.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.5.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.5.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.5.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.5.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.5.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.5.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.5.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.6.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.6.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.6.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.6.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.6.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.6.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.6.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.6.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.6.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.6.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.6.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.6.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.6.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.7.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.7.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.7.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.7.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.7.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.7.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.7.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.7.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.7.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.7.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.7.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.7.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.7.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.8.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.8.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.8.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.8.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.8.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.8.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.8.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.8.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.8.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.8.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.8.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.8.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.8.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.9.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.9.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.9.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.9.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.9.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.9.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.9.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.9.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.9.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.9.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.9.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.9.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.9.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.10.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.10.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.10.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.10.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.10.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.10.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.10.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.10.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.10.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.10.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.10.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.10.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.10.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.11.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.11.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.11.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.11.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.11.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.11.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.11.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.11.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.11.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.11.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.11.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.11.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.11.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.12.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.12.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.12.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.12.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.12.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.12.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.12.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.12.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.12.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.12.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.12.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.12.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.12.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.13.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.13.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.13.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.13.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.13.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.13.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.13.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.13.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.13.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.13.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.13.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.13.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.13.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.14.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.14.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.14.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.14.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.14.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.14.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.14.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.14.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.14.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.14.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.14.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.14.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.14.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.15.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.15.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.15.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.15.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.15.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.15.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.15.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.15.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.15.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.15.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.15.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.15.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.15.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.16.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.16.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.16.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.16.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.16.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.16.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.16.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.16.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.16.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.16.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.16.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.16.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.16.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.17.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.17.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.17.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.17.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.17.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.17.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.17.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.17.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.17.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.17.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.17.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.17.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.17.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.18.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.18.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.18.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.18.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.18.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.18.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.18.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.18.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.18.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.18.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.18.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.18.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.18.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.19.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.19.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.19.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.19.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.19.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.19.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.19.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.19.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.19.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.19.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.19.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.19.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.19.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.20.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.20.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.20.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.20.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.20.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.20.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.20.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.20.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.20.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.20.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.20.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.20.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.20.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.21.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.21.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.21.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.21.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.21.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.21.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.21.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.21.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.21.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.21.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.21.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.21.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.21.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.22.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.22.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.22.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.22.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.22.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.22.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.22.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.22.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.22.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.22.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.22.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.22.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.22.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.23.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.23.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.23.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.23.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.23.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.23.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.23.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.23.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.23.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.23.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.23.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.23.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.23.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.24.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.24.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.24.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.24.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.24.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.24.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.24.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.24.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.24.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.24.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.24.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.24.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.24.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.25.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.25.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.25.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.25.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.25.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.25.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.25.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.25.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.25.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.25.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.25.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.25.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.25.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.26.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.26.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.26.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.26.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.26.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.26.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.26.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.26.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.26.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.26.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.26.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.26.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.26.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.27.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.27.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.27.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.27.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.27.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.27.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.27.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.27.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.27.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.27.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.27.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.27.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.27.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.28.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.28.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.28.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.28.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.28.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.28.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.28.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.28.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.28.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.28.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.28.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.28.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.28.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.29.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.29.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.29.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.29.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.29.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.29.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.29.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.29.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.29.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.29.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.29.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.29.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.29.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.30.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.30.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.30.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.30.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.30.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.30.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.30.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.30.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.30.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.30.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.30.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.30.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.30.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.31.self_attn.q_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.31.self_attn.k_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.31.self_attn.v_proj.weight torch.Size([1024, 4096])
+base_model.model.model.layers.31.self_attn.o_proj.weight torch.Size([4096, 4096])
+base_model.model.model.layers.31.mlp.gate_proj.weight torch.Size([14336, 4096])
+base_model.model.model.layers.31.mlp.up_proj.base_layer.weight torch.Size([14336, 4096])
+base_model.model.model.layers.31.mlp.up_proj.lora_A.default.weight torch.Size([64, 4096])
+base_model.model.model.layers.31.mlp.up_proj.lora_B.default.weight torch.Size([14336, 64])
+base_model.model.model.layers.31.mlp.down_proj.base_layer.weight torch.Size([4096, 14336])
+base_model.model.model.layers.31.mlp.down_proj.lora_A.default.weight torch.Size([64, 14336])
+base_model.model.model.layers.31.mlp.down_proj.lora_B.default.weight torch.Size([4096, 64])
+base_model.model.model.layers.31.input_layernorm.weight torch.Size([4096])
+base_model.model.model.layers.31.post_attention_layernorm.weight torch.Size([4096])
+base_model.model.model.norm.weight torch.Size([4096])
+base_model.model.lm_head.weight torch.Size([32000, 4096])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 1885, in train
+    return inner_training_loop(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 2042, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1299, in prepare
+    result = tuple(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1300, in <genexpr>
+    self._prepare_one(obj, first_pass=True, device_placement=d) for obj, d in zip(args, device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1176, in _prepare_one
+    return self.prepare_model(obj, device_placement=device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1409, in prepare_model
+    raise ValueError(
+ValueError: You can't train a model that has been loaded in 8-bit precision on a different device than the one you're training on. Make sure you loaded the model on the correct device using for example `device_map={'':torch.cuda.current_device()}` or `device_map={'':torch.xpu.current_device()}`
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\trl\trainer\sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 1885, in train
+    return inner_training_loop(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\transformers\trainer.py", line 2042, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1299, in prepare
+    result = tuple(
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1300, in <genexpr>
+    self._prepare_one(obj, first_pass=True, device_placement=d) for obj, d in zip(args, device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1176, in _prepare_one
+    return self.prepare_model(obj, device_placement=device_placement)
+  File "C:\Users\Terry Teh\TETLAB\AICompanion\.venv\lib\site-packages\accelerate\accelerator.py", line 1409, in prepare_model
+    raise ValueError(
